@@ -105,6 +105,17 @@
             </plugin>
 
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
                 <groupId>com.mysema.maven</groupId>
                 <artifactId>apt-maven-plugin</artifactId>
                 <version>${maven.plugin.version}</version>
@@ -119,6 +130,32 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sql-maven-plugin</artifactId>
+                <version>3.0.0-SNAPSHOT</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>6.0.5</version>
+                        <type>jar</type>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <driver>com.mysql.jdbc.driver</driver>
+                    <url>jdbc:mysql://localhost/cookbook</url>
+                    <username>root</username>
+                    <password></password>
+                    <autocommit>true</autocommit>
+                    <srcFiles>
+                        <srcFile>src/main/sql/domain-drop.ddl</srcFile>
+                        <srcFile>src/main/sql/domain-create.ddl</srcFile>
+                        <!--Add other source files here for testing-->
+                    </srcFiles>
+                </configuration>
             </plugin>
         </plugins>
     </build>
