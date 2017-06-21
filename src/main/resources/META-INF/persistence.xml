@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+    <persistence-unit name="domain">
+        <class>com.github.cekmorse.persist.domain.IngredientDomain</class>
+        <class>com.github.cekmorse.persist.domain.InstructionDomain</class>
+        <class>com.github.cekmorse.persist.domain.RecipeDomain</class>
+    </persistence-unit>
+</persistence>

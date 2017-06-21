@@ -1,7 +1,8 @@
 package com.github.cekmorse.application;
 
+
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.boot.context.web.SpringBootServletInitializer;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;

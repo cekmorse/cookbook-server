@@ -28,7 +28,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString(callSuper = false)
 @EqualsAndHashCode(of = {"uuid"})
-public class Recipe implements HasUuid, Cloneable{
+public class RecipeDomain implements HasUuid, Cloneable{
 
     @Id
     @GeneratedValue(generator = "system-uuid")
@@ -56,11 +56,11 @@ public class Recipe implements HasUuid, Cloneable{
     @Column(name = "source", unique = false, nullable = true)
     private String source;
 
-//    private List<Ingredient> ingredients;
-//    private List<Instruction> instructions;
+//    private List<IngredientDomain> ingredients;
+//    private List<InstructionDomain> instructions;
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return (Recipe) super.clone();
+        return (RecipeDomain) super.clone();
     }
 }
