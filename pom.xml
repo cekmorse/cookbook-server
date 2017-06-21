@@ -334,6 +334,7 @@
                     <srcFiles>
                         <srcFile>src/main/sql/domain-drop.ddl</srcFile>
                         <srcFile>src/main/sql/domain-create.ddl</srcFile>
+                        <srcFile>src/main/sql/data/recipe.sql</srcFile>
                     </srcFiles>
                 </configuration>
             </plugin>

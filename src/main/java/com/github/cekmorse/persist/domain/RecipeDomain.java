@@ -53,8 +53,8 @@ public class RecipeDomain implements HasUuid, Cloneable{
     private String author;
 
     @Basic
-    @Column(name = "source", unique = false, nullable = true)
-    private String source;
+    @Column(name = "sourceDoc", unique = false, nullable = true)
+    private String sourceDoc;
 
 //    private List<IngredientDomain> ingredients;
 //    private List<InstructionDomain> instructions;

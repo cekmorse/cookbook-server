@@ -5,10 +5,13 @@ import com.github.cekmorse.persist.repository.ModifiedAwareRepository;
 
 import org.springframework.data.repository.NoRepositoryBean;
 
+import java.util.List;
+
 /**
  * Created by keith on 6/16/17.
  */
 @NoRepositoryBean
 public interface RecipeRepositoryCustom extends ModifiedAwareRepository<RecipeDomain, String> {
-    // Add custom method signatures here.  No implementations.
+
+    List<RecipeDomain> searchNameContains(String partialName);
 }
