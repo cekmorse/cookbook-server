@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <!-- Recipes -->
+    <recipe id="1"
+            name="testRecipe"
+            createdAt="2010-11-10 08:11:00"
+            updatedAt="2010-11-10 08:11:00"
+            author="Me"
+            source="you"/>
+</dataset>

@@ -7,6 +7,6 @@ import org.springframework.context.annotation.Import;
  * Created by keith on 6/20/17.
  */
 @Configuration
-@Import({DatabaseConfig.class, RepositoryConfigs.class})
+@Import({DatabaseConfig.class, RepositoryConfig.class})
 public class PersistConfigs {
 }
