@@ -12,9 +12,8 @@ import java.util.List;
  */
 @Service
 public class RecipeService extends ModifiedAwareCrudService<RecipeDomain, RecipeRepository> {
-
     public List<RecipeDomain> searchNameContains(String aNameSegment) {
-        if (aNameSegment == null || aNameSegment.length() < 3) {
+        if (aNameSegment == null || aNameSegment.isEmpty() || aNameSegment.length() < 3) {
             throw new IllegalArgumentException("Cannot search without at least three letters.");
         }
         return getRepository().searchNameContains(aNameSegment);
