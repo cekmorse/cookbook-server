@@ -68,7 +68,7 @@ public class RecipeControllerTest {
         get_Success(past);
     }
 
-    @Test
+    @Test(expected = NotModifiedException.class)
     public void testGetSuccess_Updated_Now() throws BadRequestException, NotModifiedException, ResourceNotFoundException {
         get_Success(now);
     }
