@@ -1,5 +1,7 @@
 package com.github.cekmorse.api.dto.recipe;
 
+import org.springframework.hateoas.ResourceSupport;
+
 import java.util.Date;
 
 import lombok.Getter;
@@ -14,7 +16,7 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @ToString(callSuper = true)
-public class RecipeFull {
+public class RecipeFull extends ResourceSupport {
     private String name;
     private Date createdAt;
     private Date updatedAt;
