@@ -7,6 +7,6 @@ import org.springframework.context.annotation.Import;
  * Created by keith on 6/21/17.
  */
 @Configuration
-@Import({})
+@Import({MapperConfig.class})
 public class ApiConfigs {
 }

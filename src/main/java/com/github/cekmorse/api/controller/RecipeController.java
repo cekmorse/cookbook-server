@@ -44,7 +44,7 @@ public class RecipeController {
     protected MapperFacade mapper;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ResponseEntity<PagedResources<RecipeFull>> getRecipe(
+    public ResponseEntity<PagedResources<RecipeFull>> getRecipes(
             @HeaderVariable("If-Modified-Since")
             final Date aIfModifiedSince,
             @PageableDefault(
@@ -66,7 +66,7 @@ public class RecipeController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity<RecipeFull> getSample(
+    public ResponseEntity<RecipeFull> getRecipe(
             @PathVariable("id")
             final String aId,
             @HeaderVariable("If-Modified-Since")
