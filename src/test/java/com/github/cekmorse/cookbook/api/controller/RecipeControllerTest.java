@@ -44,8 +44,6 @@ public class RecipeControllerTest {
 
     private void get_Success(Date updatedAt) throws NotModifiedException, BadRequestException, ResourceNotFoundException {
         // init
-        Date now = new Date();
-        Date past = new DateTime(now).minusMinutes(1).toDate();
         RecipeDomain recipe = new RecipeDomain("1", "Recipe", now, now, "Author", "SourceDoc");
 
         // setup mock
